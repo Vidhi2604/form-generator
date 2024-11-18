@@ -83,9 +83,9 @@ This project includes E2E tests written with Playwright to ensure the following 
 
 You can customize the default JSON schema, form styles, and validation logic by modifying the following files:
 
-Default schema: `App.tsx`
-Styles: `App.css` (uses Tailwind CSS)
-Validation: `utils/validation.ts`
+- Default schema: `App.tsx`
+- Styles: `App.css` (uses Tailwind CSS)
+- Validation: `utils/validation.ts`
 
 ## 👩‍💻 Contributors
 
