@@ -38,11 +38,11 @@ A React-based dynamic form generator that allows users to create, edit, and inte
 - `cd dynamic-form-generator`
 
 2. Install dependencies :
-
+- `npm install`
 3. Strat the development server :
-
+- `npm start`
 4. Run tests :
-
+- `npm test`
 
 ## 🛠️ Usage
 
