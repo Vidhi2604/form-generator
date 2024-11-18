@@ -34,12 +34,14 @@ A React-based dynamic form generator that allows users to create, edit, and inte
 
 ## ⚙️ Installation
 1. Clone the repository :
+`git clone https://github.com/your-username/dynamic-form-generator.git`
+`cd dynamic-form-generator`
 
-2. Install dependencies :
+3. Install dependencies :
 
-3. Strat the development server :
+4. Strat the development server :
 
-4. Run tests :
+5. Run tests :
 
 
 ## 🛠️ Usage
