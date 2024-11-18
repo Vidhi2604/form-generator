@@ -45,17 +45,17 @@ A React-based dynamic form generator that allows users to create, edit, and inte
 - `npm test`
 
 ## 🛠️ Usage
-<h3> JSON Schema Editor</h3>
+<h3> 1. JSON Schema Editor</h3>
 - Modify the JSON schema in the editor on the left-hand side of the app.
 - The form on the right-hand side updates in real time to reflect changes.
-<h3> Submit Form</h3>
+<h3>2. Submit Form</h3>
 - Fill out the form and submit it.
 - Validates required fields and shows error messages for invalid entries.
-<h3> Copy JSON</h3>
+<h3> 3. Copy JSON</h3>
 - Use the "Copy Form JSON" button to copy the current JSON schema to your clipboard.
-<h3> Download Submission</h3>
+<h3> 4. Download Submission</h3>
 - Submissions can be downloaded as a .json file. The download button is enabled only after the form has been submitted.
-<h3> Dark Mode</h3>
+<h3>5. Dark Mode</h3>
 - Toggle the dark mode for a better user experience in low-light environments.
 ## 🧪 Tests
 
