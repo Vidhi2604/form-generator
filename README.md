@@ -9,7 +9,27 @@ A React-based dynamic form generator that allows users to create, edit, and inte
 - Supports various field types (text, email, radio, textarea, etc.).
 - Real-time updates: Form automatically reflects changes made in the JSON editor.
 
+<h3>2. Form validation review</h3>
 
+- Built-in validation using Zod for required fields, custom patterns, and more.
+- Shows error messages for invalid or missing inputs.
+
+<h3>3. Dark mode support</h3>
+
+- Toggle between light and dark themes for better accessibility and user preference.
+  
+<h3>4."Copy Form JSON" Button</h3>
+
+- Quickly copy the current form's JSON schema to the clipboard with a single click.
+
+<h3>5. Download Form Submissions</h3>
+
+- Save all form submissions as a JSON file.
+- The download button is enabled only when the form has been successfully filled and submitted.
+
+<h3>6. Responsive Layout</h3>
+
+- Mobile-friendly UI with responsive design for optimal usability across devices.
 ## 📂 Project Structure
 
 ## ⚙️ Installation
