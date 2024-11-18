@@ -4,6 +4,8 @@ A React-based dynamic form generator that allows users to create, edit, and inte
 
 ## 🚀 Features
 <h3>1. Dynamic Form Generation</h3>
+
+- 🤝 Looking to collaborate on open source projects
 -Users can define form fields using a JSON schema.
 -Supports various field types (text, email, radio, textarea, etc.).
 -Real-time updates: Form automatically reflects changes made in the JSON editor.
