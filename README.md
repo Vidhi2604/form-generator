@@ -32,6 +32,17 @@ A React-based dynamic form generator that allows users to create, edit, and inte
 - Mobile-friendly UI with responsive design for optimal usability across devices.
 ## 📂 Project Structure
 
+src/
+├── components/
+│   └── Form.tsx         # Form rendering and validation logic
+├── App.tsx              # Main application entry
+├── App.css              # Custom styles (uses Tailwind CSS)
+├── form.test.ts         # End-to-End (E2E) tests using Playwright
+├── index.tsx            # React entry point
+└── utils/
+    └── validation.ts    # Utility functions for form validation
+
+
 ## ⚙️ Installation
 
 ## 🛠️ Usage
