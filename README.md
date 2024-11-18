@@ -46,22 +46,46 @@ A React-based dynamic form generator that allows users to create, edit, and inte
 
 ## 🛠️ Usage
 <h3> 1. JSON Schema Editor</h3>
+
 - Modify the JSON schema in the editor on the left-hand side of the app.
 - The form on the right-hand side updates in real time to reflect changes.
 <h3>2. Submit Form</h3>
+
+
 - Fill out the form and submit it.
 - Validates required fields and shows error messages for invalid entries.
 <h3> 3. Copy JSON</h3>
+
+
 - Use the "Copy Form JSON" button to copy the current JSON schema to your clipboard.
 <h3> 4. Download Submission</h3>
+
 - Submissions can be downloaded as a .json file. The download button is enabled only after the form has been submitted.
 <h3>5. Dark Mode</h3>
+
 - Toggle the dark mode for a better user experience in low-light environments.
 
 
 ## 🧪 Tests
 
+This project includes E2E tests written with Playwright to ensure the following functionalities work as expected:
+
+1. JSON Editor and Form Rendering: Ensures both the JSON editor and form are visible on the page.
+2. Real-Time Form Updates: Verifies the form updates based on changes made in the JSON schema.
+3. Form Validation: Tests error messages for required fields.
+4. Successful Form Submission: Confirms the form submits successfully with valid data.
+5. Responsive Layout: Checks for proper layout on smaller screens.
+
+- Run tests with :
+     `npx playwright test`
+
 ## 🖌️ Customization
+
+You can customize the default JSON schema, form styles, and validation logic by modifying the following files:
+
+Default schema: `App.tsx`
+Styles: `App.css` (uses Tailwind CSS)
+Validation: `utils/validation.ts`
 
 ## 👩‍💻 Contributors
 
