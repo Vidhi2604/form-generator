@@ -32,15 +32,7 @@ A React-based dynamic form generator that allows users to create, edit, and inte
 - Mobile-friendly UI with responsive design for optimal usability across devices.
 ## 📂 Project Structure
 
-src/
-├── components/
-│   └── Form.tsx         # Form rendering and validation logic
-├── App.tsx              # Main application entry
-├── App.css              # Custom styles (uses Tailwind CSS)
-├── form.test.ts         # End-to-End (E2E) tests using Playwright
-├── index.tsx            # React entry point
-└── utils/
-    └── validation.ts    # Utility functions for form validation
+. ├── public/ # Static assets and public files │ ├── index.html # Main HTML file │ └── favicon.ico # Application favicon │ ├── src/ # Source code │ ├── components/ # Reusable React components │ │ ├── Form.tsx # Dynamic form rendering and validation logic │ │ └── DarkModeToggle.tsx # Dark mode toggle button │ │ │ ├── utils/ # Utility functions and helpers │ │ ├── validation.ts # Zod schema generation for validation │ │ └── formHelpers.ts # Additional form helper functions │ │ │ ├── App.tsx # Main application component │ ├── App.css # Application-specific styling (uses Tailwind CSS) │ ├── form.test.ts # End-to-end (E2E) tests with Playwright │ ├── index.tsx # React entry point │ └── types/ # Type definitions │ └── formTypes.ts # TypeScript interfaces for form schema │ ├── .eslintrc.json # ESLint configuration ├── .prettierrc # Prettier configuration ├── tailwind.config.js # Tailwind CSS configuration ├── playwright.config.ts # Playwright configuration for E2E testing ├── package.json # Project dependencies and scripts ├── tsconfig.json # TypeScript configuration └── README.md # Project documentation
 
 
 ## ⚙️ Installation
