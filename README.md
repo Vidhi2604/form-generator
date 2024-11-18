@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Dynamic Form Generator React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based dynamic form generator that allows users to create, edit, and interact with forms in real time using a JSON schema editor. This project includes advanced features like dark mode support, form validation preview, JSON manipulation, and submission downloads.
 
 ## Available Scripts
 
