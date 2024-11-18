@@ -3,6 +3,7 @@
 A React-based dynamic form generator that allows users to create, edit, and interact with forms in real time using a JSON schema editor. This project includes advanced features like dark mode support, form validation preview, JSON manipulation, and submission downloads.
 
 ## 🚀 Features
+<h3>1. Dynamic Form Generation</h3>
 
 
 ## 📂 Project Structure
@@ -21,7 +22,7 @@ A React-based dynamic form generator that allows users to create, edit, and inte
 
 ## 🌟 Acknowledgments
 
-## Deployment
+## ✔ Deployment
 
 In the project directory, you can run:
 
