@@ -35,7 +35,7 @@ A React-based dynamic form generator that allows users to create, edit, and inte
 ## ⚙️ Installation
 1. Clone the repository :
 - `git clone git@github.com:Vidhi2604/form-generator.git`
-- `cd dynamic-form-generator`
+- `cd form-generator`
 
 2. Install dependencies :
 - `npm install`
