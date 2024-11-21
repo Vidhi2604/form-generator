@@ -110,18 +110,21 @@ const App: React.FC = () => {
   });
 
   useEffect(() => {
-    const generatedSchema = z.object(
-      Object.fromEntries(
-        schema.fields.map((field) => [
-          field.id,
-          field.required
-            ? z.string().min(1, `${field.label} is required`)
-            : z.string().optional(),
-        ])
-      )
-    );
-    setZodSchema(generatedSchema);
-    reset();
+    const generateZodSchema = () => {
+      const generatedSchema = z.object(
+        Object.fromEntries(
+          schema.fields.map((field) => [
+            field.id,
+            field.required
+              ? z.string().min(1, `${field.label} is required`)
+              : z.string().optional(),
+          ])
+        )
+      );
+      setZodSchema(generatedSchema);
+      reset();
+    };
+    generateZodSchema();
   }, [schema, reset]);
 
   useEffect(() => {
@@ -131,9 +134,11 @@ const App: React.FC = () => {
         onChange: () => {
           try {
             const updatedSchema = editorInstance.current!.get() as FormSchema;
+            validateSchema(updatedSchema);
             setSchema(updatedSchema);
-          } catch {
-            console.error("Invalid JSON");
+          } catch (err: any) {
+            const errorMessage = err.message || "Invalid JSON Schema.";
+            alert(`Error in JSON Schema: ${errorMessage}`);
           }
         },
       });
@@ -144,6 +149,41 @@ const App: React.FC = () => {
       editorInstance.current?.destroy();
     };
   }, []);
+
+  const validateSchema = (schema: FormSchema) => {
+    // Basic validation rules for schema structure
+    const schemaValidator = z.object({
+      formTitle: z.string().min(1, "Form title is required."),
+      formDescription: z.string().min(1, "Form description is required."),
+      fields: z
+        .array(
+          z.object({
+            id: z.string().min(1, "Each field must have an ID."),
+            type: z.string().min(1, "Each field must have a type."),
+            label: z.string().min(1, "Each field must have a label."),
+            required: z.boolean(),
+            placeholder: z.string().optional(),
+            options: z
+              .array(
+                z.object({
+                  value: z.string(),
+                  label: z.string(),
+                })
+              )
+              .optional(),
+            validation: z
+              .object({
+                pattern: z.string(),
+                message: z.string(),
+              })
+              .optional(),
+          })
+        )
+        .min(1, "At least one field is required."),
+    });
+
+    schemaValidator.parse(schema); // Will throw an error if invalid
+  };
 
   const toggleDarkMode = () => {
     setIsDarkMode((prev) => !prev);
@@ -206,7 +246,7 @@ const App: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
         {/* JSON Editor Section */}
         <div className="p-4 bg-white rounded shadow dark:bg-gray-800 dark:text-gray-300">
-          <h2 className="text-xl font-bold mb-4">JSON Editor</h2>
+          <h2 className="text-xl font-bold mb-4s">JSON Editor</h2>
           <div ref={jsonEditorRef} className="h-96 jsoneditor"></div>
         </div>
 
